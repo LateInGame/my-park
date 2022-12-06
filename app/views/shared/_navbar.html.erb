@@ -18,7 +18,7 @@
           </li>
           <li class="nav-link"> <% if user_signed_in? %>
       <div> <% current_user.first_name %> </div>
-      <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn" %>
+      <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn", id: "drop_signout" %>
       <% else %>
       <%= link_to "Sign in", user_session_path, class: "btn" %>
       <% end %></li>

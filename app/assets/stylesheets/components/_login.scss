@@ -7,6 +7,16 @@
   color: white !important
 }
 
+.mapboxgl-ctrl-geocoder {
+  max-width: none;
+  width: 100%;
+  border: 0px;
+  box-shadow: 0,0,8, 50% black;
+  background-color: transparent;
+  text-align: center;
+  align-items: center;
+}
+
 html, body {
   height: 100%;
   margin: 10px;
@@ -29,7 +39,6 @@ html, body {
   border-style: solid;
   border-color: #03DA9F;
   padding: 40px;
-  width: 350px;
   margin: 0 auto;
  }
 

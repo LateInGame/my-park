@@ -8,7 +8,19 @@ html {
 #edit_user {
   color: #03DA9F;
 }
+// LOCATION ICON
 
+.mapboxgl-ctrl mapboxgl-ctrl-group {
+  background: #24685D !important;
+  border-radius: 50%;
+}
+
+.mapboxgl-ctrl-group {
+  background: #24685D !important;
+  color: white !important;
+}
+
+// SEARCH BAR
 .mapboxgl-ctrl-geocoder--input {
   background-color:rgba(130,130,129, 0.3);
   color: white;
@@ -442,5 +454,9 @@ header .container {
   border-radius: 12px;
   color: white;
 
+ }
+
+ #back_btn_prof {
+  margin-bottom: 10px
  }
 }

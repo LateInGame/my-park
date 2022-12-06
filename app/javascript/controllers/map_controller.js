@@ -142,7 +142,7 @@ export default class extends Controller {
         }
       });
       // this is where the code from the next step will go
-      this.map.on('dblclick', (event) => {
+      this.map.on('touchend', (event) => {
         const coords = Object.keys(event.lngLat).map((key) => event.lngLat[key]);
         this.instructionsTarget.querySelector(".street-availability").innerText
         // event.preventDefault();
