@@ -11,6 +11,8 @@ export default class extends Controller {
   static targets = [ "instructions", "map"]
   connect() {
 
+    // connect car
+
     mapboxgl.accessToken = this.apiKeyValue
 
     this.map = new mapboxgl.Map({
@@ -21,8 +23,8 @@ export default class extends Controller {
 
 
     this.#addMarkersToMap()
-    // this.#addCarMarkerToMap()
-
+    this.#addCarMarkerToMap()
+    this.#showCar()
 
     this.map.addControl(new MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
@@ -234,6 +236,32 @@ export default class extends Controller {
       })
 
     }
+    // RETURN TO CAR BUTTON STARTS HEERE -- WARNING -- FATAL DANGER
+
+    #addCarMarkerToMap() {
+
+      const carButton = document.querySelector('.fa-solid.fa-car');
+      carButton.addEventListener('click',() => {
+              // console.log("oiiiii")
+              // this.markersValue.forEach((marker) => {
+                const customMarker = document.createElement("div")
+                customMarker.className = "marker"
+                //customMarker.style.backgroundImage = `url('${marker.image_url}')`
+                customMarker.style.backgroundSize = "contain"
+                customMarker.style.width = "25px"
+                customMarker.style.height = "25px"
+                //this.showCar(customMarker)
+
+              })
+            }
+
+    #showCar(customMarker) {
+      const newMarker = new mapboxgl.Marker(customMarker)
+      // this.footersTarget.querySelector('.fa-solid.fa-car')
+      .setLngLat({lng: -8.693849017008867, lat: 41.68360733974835})
+      .addTo(this.map)
+    }
+
       #fitMapToMarkers(coords) {
         const bounds = new mapboxgl.LngLatBounds()
         bounds.extend(coords)
