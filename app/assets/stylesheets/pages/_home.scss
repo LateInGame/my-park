@@ -1,23 +1,12 @@
 // Specific CSS for your home-page
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-html, body {
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-}
-
 html {
   margin: 0px !important;
 }
 
 #edit_user {
   color: #03DA9F;
-}
-
-
-.bg-dark {
-  background-color: rgba(130, 130, 129, 0.3) !important;
-  // opacity: 50%;
 }
 
 .mapboxgl-ctrl-logo {
