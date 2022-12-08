@@ -20,11 +20,11 @@ export default class extends Controller {
     // IF NOT NILL, IT WILL SHOW THE FORM AND SEE USER CLICK
     this.instructionsTarget.querySelector(".leavepark").style.display = "inline"
     // IF USER IS PARKED, HIDES FORM
-    this.instructionsTarget.querySelector(".yes-btn").addEventListener("click", (event) => {
+    this.instructionsTarget.querySelector(".no-btn").addEventListener("click", (event) => {
       this.instructionsTarget.querySelector(".leavepark").style.display = "none"
     })
     // IF USER IS PARKED, REMOVES PARKING LOCATION AND HIDES FORM AGAIN
-    this.instructionsTarget.querySelector(".no-btn").addEventListener("click", (event) => {
+    this.instructionsTarget.querySelector(".yes-btn").addEventListener("click", (event) => {
       console.log("here")
       this.carMarker.remove()
       this.instructionsTarget.querySelector(".leavepark").style.display = "none"
